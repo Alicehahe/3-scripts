@@ -1,0 +1,90 @@
+1.了解python中数据可视化库，matplotlib.pylot，将数据可视化
+1.1 .plot 画成线形图
+1.2 .scatter 画成散点图
+1.3 .hist 通过将数据划分成多个bin,画成直方图
+1.4 个性化可视图 .xlabel .ylabel .title等等
+1.5 展示图 .show
+
+2.了解python中可以存放不同类型的数据并且同时使用的数据的第三方库pandas
+2.1 常和.csv文件结合使用，通过pandas.read_csv('xx.csv'),可以将数据读取出来
+2.2 通过brics来存放数据
+
+3.错误和异常
+常见异常：都是基于BaseException:
+Exception:
+NameError 变量未定义 
+syntax 语法错误
+IOError 文件不存在
+ZeroDivisionError 除0
+ValueError 转换值类型错误
+
+用户中断
+KeyboardError ctrl+c导致的错误
+
+systemExit
+python解释器退出
+
+3.1异常：
+try:
+	xxxx
+except Excepton [e]: e出现异常的类型
+	exception_block 逻辑处理异常
+
+如果except后面不加参数，就是捕获所有异常
+
+3.2 能捕获异常的情况：
+运行时错误可以捕获
+运行前错误，不能捕获
+异常的设置和捕获的异常不是同一种类型时，不会正常运行
+
+好处：可以保证程序的健壮性，出错，不会终止
+
+3.3 捕获多个异常：
+多个Exception
+
+try__except___else
+
+3.4 另一种异常捕获：
+try-finally，不管有没有捕获，都会执行finally中的部分，用于清理和恢复系统资源
+
+4.with语句： 
+是try finally的简洁版，结尾会关闭清理文件，但是异常的捕获还是需要用户添加
+
+5.python对文件的处理
+打开文件 open(name,mode)
+name 文件名
+mode 打开模式，默认是只读方式打开文件
+
+读取文件
+read([size])   读取size大小的字节，默认读取全部
+readline([size]) 读取一行
+readlines([size]) 读取完文件，返回每一行所组成的列表  如果文件很大，内存空间占用大
+通过for循环进行读取
+
+写入文件
+write(str) 将字符串写入文件
+writelines（str_list）写多行到文件
+
+写缓存，文件写入遇到的问题
+1.调用f.close()或者f.flush()刷新缓存将数据存到磁盘中
+2.数据量大于缓存区，会把多余的输出，方法不好
+
+文件的关闭
+1.缓存同步到磁盘
+
+6.python对正则表达式re模块
+7.python和mysql结合使用
+mysqldb
+mysql.connect()
+
+8.python和excel结合
+pass
+9.python和web结合
+web.py是python web框架
+pip install web.py
+web开发基础
+html css js
+
+
+
+
